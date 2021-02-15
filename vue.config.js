@@ -154,11 +154,11 @@ module.exports = {
     devServer: {
         proxy: {
             '/api': {
-                target: 'http://us-la-cn2.sakurafrp.com:59660',
+                target: process.env.VUE_APP_API_URL1,
                 // target: 'http://localhost:8888',
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api': '/api/v1'
+                    '^/api': ''
                 }
             }
         }
